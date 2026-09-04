@@ -1,0 +1,46 @@
+# ==========================================
+# 1. Python Cache & Temporary Files
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# ==========================================
+# 2. Virtual Environment
+# ==========================================
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+# 3. File Sensitif & Kunci API
+# ==========================================
+.env
+.streamlit/secrets.toml
+
+# ==========================================
+# 4. Pengaturan IDE / Editor
+# ==========================================
+.vscode/
+.idea/
+*.swp
+
+# ==========================================
+# 5. File Sistem Operasi
+# ==========================================
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# 6. Data & Model Berukuran Besar (Opsional)
+# ==========================================
+# Abaikan file CSV/Excel jika ukurannya terlalu besar (>100MB)
+*.csv
+*.xlsx
+
+# Abaikan model pkl jika ukurannya melebihi batas upload GitHub
+# models/*.pkl
