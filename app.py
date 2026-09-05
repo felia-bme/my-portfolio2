@@ -49,8 +49,8 @@ TEST_SIZE = 0.20
 # 2. PAGE CONFIGURATION
 # ----------------------------------------------------
 st.set_page_config(
-    page_title="Data & AI Portfolio | Breast Cancer Classification",
-    page_icon="🩺",
+    page_title="Felia's Portfolio",
+    page_icon="🎓",
     layout="wide",
 )
 
@@ -329,8 +329,8 @@ def render_model_performance(model, X, y, key_prefix=""):
 # 5. NAVIGATION TABS
 # ----------------------------------------------------
 tab_portfolio, tab_predictor, tab_analytics = st.tabs([
-    "🏠 Portfolio & Profile",
-    "🤖 Breast Cancer Predictor",
+    "🏠 Home",
+    "🤖 ML Predictor",
     "📊 EDA & Model Performance",
 ])
 
@@ -342,40 +342,39 @@ train_df = load_training_data()
 # TAB 1: PORTFOLIO & FEATURED PROJECTS
 # ====================================================
 with tab_portfolio:
-    st.title("My Data Science & AI Portfolio 🚀")
+    st.title("Hi, I'm Felia! 👋")
     st.write(
         "Welcome to my interactive portfolio! This web app showcases my background, "
         "key projects, and a live machine learning pipeline for medical diagnostic classification."
     )
     st.divider()
 
-    st.subheader("About Me")
+    st.subheader("Aspiring AI/ML Engineer – Biomedical Applications")
     col_photo, col_bio = st.columns([1, 3])
 
     with col_photo:
-        if os.path.exists("images/profile.jpg"):
-            st.image("images/profile.jpg", width=200)
+        if os.path.exists("profile.jpg"):
+            st.image("profile.jpg", width=200)
         else:
             st.image("https://via.placeholder.com/200x200.png?text=Profile+Photo", width=200)
 
     with col_bio:
-        st.markdown("""
-        ### **Your Name**
-        **Data Scientist & AI Specialist**
-
-        Results-driven Data Professional skilled in end-to-end Machine Learning pipelines,
-        exploratory data analysis, and deploying interactive diagnostic web platforms. Experienced in turning
-        complex datasets into accurate, actionable predictions.
+        st.markdown(""" 
+        Results-driven biomedical engineering student with a strong interest in Artificial 
+        Intelligence and Machine Learning. Skilled in developing end-to-end Machine Learning 
+        pipelines, performing exploratory data analysis, and building interactive biomedical 
+        applications. Experienced in transforming complex datasets into meaningful insights 
+        and actionable predictions.
         """)
         st.text("Core Skills: Python · Scikit-Learn · Streamlit · Medical Informatics · Data Visualization")
 
     st.divider()
 
     m1, m2, m3, m4 = st.columns(4)
-    m1.metric("Projects Completed", "5+")
+    m1.metric("Projects Completed", "25+")
     m2.metric("Features Handled", "30+")
-    m3.metric("Model ROC-AUC Score", "0.99+")
-    m4.metric("Dataset Samples", str(len(train_df)) if train_df is not None else "569")
+    m3.metric("Honors & Awards", "3+")
+    m4.metric("Certificates", "2+")
 
     st.divider()
 
@@ -395,7 +394,7 @@ with tab_portfolio:
                 st.caption("*(WDBC Diagnostic Classification)*")
 
             st.write("**Classification Model · Accuracy ≈ 97% · ROC-AUC ≈ 0.99**")
-            st.info("👉 Try it live in the **🤖 Breast Cancer Predictor** tab.")
+            st.info("👉 Try it live in the **🤖 ML Predictor** tab.")
 
     with p2:
         with st.container(border=True):
@@ -447,6 +446,7 @@ with tab_predictor:
         # ------------------------------------------------
         # A. Single-sample manual predictor
         # ------------------------------------------------
+        st.title("🤖 Breast Cancer Predictor")
         st.header("🔍 Prediksi Satu Sampel (Input Manual)")
         st.write("Geser slider di bawah untuk mengubah nilai fitur, lalu lihat hasil prediksi model secara langsung.")
 
