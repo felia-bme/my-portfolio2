@@ -35,12 +35,12 @@ venv.bak/
 .DS_Store
 Thumbs.db
 
-# ==========================================
-# 6. Data & Model Berukuran Besar (Opsional)
-# ==========================================
-# Abaikan file CSV/Excel jika ukurannya terlalu besar (>100MB)
-*.csv
-*.xlsx
+# # ==========================================
+# # 6. Data & Model Berukuran Besar (Opsional)
+# # ==========================================
+# # Abaikan file CSV/Excel jika ukurannya terlalu besar (>100MB)
+# *.csv
+# *.xlsx
 
 # Abaikan model pkl jika ukurannya melebihi batas upload GitHub
 # models/*.pkl
